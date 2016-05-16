@@ -10,12 +10,12 @@ namespace Task_Manager {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for MyForm
+	/// Summary for New_Task
 	/// </summary>
-	public ref class MyForm : public System::Windows::Forms::Form
+	public ref class New_Task : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm(void)
+		New_Task(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace Task_Manager {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~MyForm()
+		~New_Task()
 		{
 			if (components)
 			{
@@ -50,7 +50,7 @@ namespace Task_Manager {
 		{
 			this->components = gcnew System::ComponentModel::Container();
 			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyForm";
+			this->Text = L"New_Task";
 			this->Padding = System::Windows::Forms::Padding(0);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 		}

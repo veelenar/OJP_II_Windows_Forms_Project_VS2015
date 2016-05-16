@@ -136,12 +136,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="New_Task.cpp" />
+    <ClCompile Include="Task_End.cpp" />
+    <ClCompile Include="Task_Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="New_Task.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Task_End.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Task_Manager.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Task_End.resx">
+      <DependentUpon>Task_End.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task_Manager.resx">
+      <DependentUpon>Task_Manager.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
