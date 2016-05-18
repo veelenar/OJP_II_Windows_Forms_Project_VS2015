@@ -82,6 +82,8 @@ namespace Task_Manager {
 			this->ClientSize = System::Drawing::Size(432, 134);
 			this->Controls->Add(this->button_CloseAnnouncement);
 			this->Controls->Add(this->label1);
+			this->MaximumSize = System::Drawing::Size(448, 173);
+			this->MinimumSize = System::Drawing::Size(448, 173);
 			this->Name = L"Task_End";
 			this->Text = L"Task_End";
 			this->ResumeLayout(false);

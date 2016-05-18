@@ -136,14 +136,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="New_Task.cpp" />
     <ClCompile Include="Task_End.cpp" />
     <ClCompile Include="Task_Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="New_Task.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="Task_End.h">
       <FileType>CppForm</FileType>
     </ClInclude>
