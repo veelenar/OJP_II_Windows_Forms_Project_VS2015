@@ -131,7 +131,6 @@ namespace Task_Manager {
 			this->listView1->TabIndex = 0;
 			this->listView1->UseCompatibleStateImageBehavior = false;
 			this->listView1->View = System::Windows::Forms::View::Details;
-			this->listView1->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::listView1_SelectedIndexChanged);
 			// 
 			// columnHeader_Task
 			// 
