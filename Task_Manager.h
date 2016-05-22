@@ -2,7 +2,8 @@
 #include <iostream>
 #include <windows.h>
 #include "Task_End.h"
-
+#include "About.h"
+#include "About_Author.h"
 
 namespace Task_Manager {
 
@@ -47,10 +48,14 @@ namespace Task_Manager {
 	private: System::Windows::Forms::Label^  label_Date;
 	private: System::Windows::Forms::MenuStrip^  menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^  menuToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  oMnieToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^  oProgramieToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  zamknijToolStripMenuItem;
 	private: System::Windows::Forms::Timer^  timer1;
+	private: System::Windows::Forms::Button^  button_DeleteTask;
+	private: System::Windows::Forms::ToolStripMenuItem^  oAutorzeToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  zapiszniedostêpneToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  wczytajniedostêpneToolStripMenuItem;
 	private: System::ComponentModel::IContainer^  components;
 
 
@@ -68,7 +73,7 @@ namespace Task_Manager {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::ListViewItem^  listViewItem3 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(3) {
+			System::Windows::Forms::ListViewItem^  listViewItem2 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(3) {
 				L"Zrób projekt na OJP",
 					L"19.05.2016", L"Kacper D¹browski"
 			}, -1));
@@ -81,9 +86,12 @@ namespace Task_Manager {
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->menuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->zamknijToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->oMnieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->oProgramieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->oAutorzeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->button_DeleteTask = (gcnew System::Windows::Forms::Button());
+			this->zapiszniedostêpneToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->wczytajniedostêpneToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -93,7 +101,7 @@ namespace Task_Manager {
 				this->columnHeader_Task,
 					this->columnHeader_Date, this->columnHeader_Person
 			});
-			this->listView1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(1) { listViewItem3 });
+			this->listView1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(1) { listViewItem2 });
 			this->listView1->Location = System::Drawing::Point(12, 27);
 			this->listView1->Name = L"listView1";
 			this->listView1->Size = System::Drawing::Size(600, 364);
@@ -139,7 +147,7 @@ namespace Task_Manager {
 			// 
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->menuToolStripMenuItem,
-					this->oMnieToolStripMenuItem, this->oProgramieToolStripMenuItem
+					this->oProgramieToolStripMenuItem, this->oAutorzeToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -149,7 +157,10 @@ namespace Task_Manager {
 			// 
 			// menuToolStripMenuItem
 			// 
-			this->menuToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->zamknijToolStripMenuItem });
+			this->menuToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->wczytajniedostêpneToolStripMenuItem,
+					this->zapiszniedostêpneToolStripMenuItem, this->zamknijToolStripMenuItem
+			});
 			this->menuToolStripMenuItem->Name = L"menuToolStripMenuItem";
 			this->menuToolStripMenuItem->Size = System::Drawing::Size(50, 20);
 			this->menuToolStripMenuItem->Text = L"Menu";
@@ -157,16 +168,9 @@ namespace Task_Manager {
 			// zamknijToolStripMenuItem
 			// 
 			this->zamknijToolStripMenuItem->Name = L"zamknijToolStripMenuItem";
-			this->zamknijToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->zamknijToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->zamknijToolStripMenuItem->Text = L"Zamknij";
 			this->zamknijToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::zamknijToolStripMenuItem_Click);
-			// 
-			// oMnieToolStripMenuItem
-			// 
-			this->oMnieToolStripMenuItem->Name = L"oMnieToolStripMenuItem";
-			this->oMnieToolStripMenuItem->Size = System::Drawing::Size(58, 20);
-			this->oMnieToolStripMenuItem->Text = L"O mnie";
-			this->oMnieToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::oMnieToolStripMenuItem_Click);
 			// 
 			// oProgramieToolStripMenuItem
 			// 
@@ -175,17 +179,47 @@ namespace Task_Manager {
 			this->oProgramieToolStripMenuItem->Text = L"O programie";
 			this->oProgramieToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::oProgramieToolStripMenuItem_Click);
 			// 
+			// oAutorzeToolStripMenuItem
+			// 
+			this->oAutorzeToolStripMenuItem->Name = L"oAutorzeToolStripMenuItem";
+			this->oAutorzeToolStripMenuItem->Size = System::Drawing::Size(70, 20);
+			this->oAutorzeToolStripMenuItem->Text = L"O autorze";
+			this->oAutorzeToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::oAutorzeToolStripMenuItem_Click);
+			// 
 			// timer1
 			// 
 			this->timer1->Enabled = true;
 			this->timer1->Interval = 21600000;
 			this->timer1->Tick += gcnew System::EventHandler(this, &MyForm::timer1_Tick);
 			// 
+			// button_DeleteTask
+			// 
+			this->button_DeleteTask->Location = System::Drawing::Point(463, 398);
+			this->button_DeleteTask->Name = L"button_DeleteTask";
+			this->button_DeleteTask->Size = System::Drawing::Size(149, 31);
+			this->button_DeleteTask->TabIndex = 4;
+			this->button_DeleteTask->Text = L"Usuñ zadanie";
+			this->button_DeleteTask->UseVisualStyleBackColor = true;
+			this->button_DeleteTask->Click += gcnew System::EventHandler(this, &MyForm::button_DeleteTask_Click);
+			// 
+			// zapiszniedostêpneToolStripMenuItem
+			// 
+			this->zapiszniedostêpneToolStripMenuItem->Name = L"zapiszniedostêpneToolStripMenuItem";
+			this->zapiszniedostêpneToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->zapiszniedostêpneToolStripMenuItem->Text = L"Zapisz(niedostêpne)";
+			// 
+			// wczytajniedostêpneToolStripMenuItem
+			// 
+			this->wczytajniedostêpneToolStripMenuItem->Name = L"wczytajniedostêpneToolStripMenuItem";
+			this->wczytajniedostêpneToolStripMenuItem->Size = System::Drawing::Size(188, 22);
+			this->wczytajniedostêpneToolStripMenuItem->Text = L"Wczytaj(niedostêpne)";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(624, 441);
+			this->Controls->Add(this->button_DeleteTask);
 			this->Controls->Add(this->label_Date);
 			this->Controls->Add(this->button_NewTask);
 			this->Controls->Add(this->listView1);
@@ -333,13 +367,12 @@ namespace Task_Manager {
 			catch (Exception^ exception) { break; };
 		}
 	}
+
 	private: System::Void oProgramieToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-
+		About^ About_Form_Open = gcnew About;
+		About_Form_Open->ShowDialog();
 	}
 
-	private: System::Void oMnieToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-
-	}
 	private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
 		SYSTEMTIME st;
 		GetLocalTime(&st);
@@ -378,5 +411,15 @@ namespace Task_Manager {
 	private: System::Void zamknijToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 		Close();
 	}
+private: System::Void button_DeleteTask_Click(System::Object^  sender, System::EventArgs^  e) {
+	try {
+		this->listView1->SelectedItems[0]->Remove();
+	}
+	catch(Exception^ exc){};
+	}
+private: System::Void oAutorzeToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	About_Author^ About_Author_Window_Open = gcnew About_Author;
+	About_Author_Window_Open->ShowDialog();
+}
 };
 }

@@ -136,10 +136,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="About.cpp" />
+    <ClCompile Include="About_Author.cpp" />
     <ClCompile Include="Task_End.cpp" />
     <ClCompile Include="Task_Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="About.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="About_Author.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Task_End.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -148,6 +156,12 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About_Author.resx">
+      <DependentUpon>About_Author.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Task_End.resx">
       <DependentUpon>Task_End.h</DependentUpon>
     </EmbeddedResource>

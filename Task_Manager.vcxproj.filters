@@ -21,6 +21,12 @@
     <ClInclude Include="Task_End.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="About.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="About_Author.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Task_Manager.cpp">
@@ -29,11 +35,14 @@
     <ClCompile Include="Task_End.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="About.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="About_Author.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="New_Task.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
     <EmbeddedResource Include="Task_End.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
