@@ -61,9 +61,9 @@ namespace Task_Manager {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label1->Location = System::Drawing::Point(13, 13);
+			this->label1->Location = System::Drawing::Point(-1, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(560, 300);
+			this->label1->Size = System::Drawing::Size(605, 360);
 			this->label1->TabIndex = 0;
 			this->label1->Text = resources->GetString(L"label1.Text");
 			// 
@@ -87,6 +87,7 @@ namespace Task_Manager {
 			this->MaximumSize = System::Drawing::Size(632, 524);
 			this->MinimumSize = System::Drawing::Size(632, 524);
 			this->Name = L"About";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"About";
 			this->ResumeLayout(false);
 			this->PerformLayout();

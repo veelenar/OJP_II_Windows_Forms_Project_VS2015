@@ -85,6 +85,7 @@ namespace Task_Manager {
 			this->Controls->Add(this->button_BackToList);
 			this->Controls->Add(this->label1);
 			this->Name = L"About_Author";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"About_Author";
 			this->ResumeLayout(false);
 			this->PerformLayout();

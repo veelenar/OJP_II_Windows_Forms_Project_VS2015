@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClCompile Include="About.cpp" />
     <ClCompile Include="About_Author.cpp" />
+    <ClCompile Include="Alert.cpp" />
     <ClCompile Include="Task_End.cpp" />
     <ClCompile Include="Task_Manager.cpp" />
   </ItemGroup>
@@ -146,6 +147,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="About_Author.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Alert.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Task_End.h">
@@ -161,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="About_Author.resx">
       <DependentUpon>About_Author.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alert.resx">
+      <DependentUpon>Alert.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Task_End.resx">
       <DependentUpon>Task_End.h</DependentUpon>

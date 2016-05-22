@@ -27,6 +27,9 @@
     <ClInclude Include="About_Author.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Alert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Task_Manager.cpp">
@@ -41,12 +44,21 @@
     <ClCompile Include="About_Author.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Alert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Task_End.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="Task_Manager.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About_Author.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

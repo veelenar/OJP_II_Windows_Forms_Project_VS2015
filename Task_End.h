@@ -85,6 +85,7 @@ namespace Task_Manager {
 			this->MaximumSize = System::Drawing::Size(448, 173);
 			this->MinimumSize = System::Drawing::Size(448, 173);
 			this->Name = L"Task_End";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"Task End";
 			this->ResumeLayout(false);
 			this->PerformLayout();

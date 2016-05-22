@@ -4,6 +4,7 @@
 #include "Task_End.h"
 #include "About.h"
 #include "About_Author.h"
+#include "Alert.h"
 
 namespace Task_Manager {
 
@@ -251,6 +252,7 @@ namespace Task_Manager {
 			this->MaximumSize = System::Drawing::Size(640, 480);
 			this->MinimumSize = System::Drawing::Size(640, 480);
 			this->Name = L"MyForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Task Manager";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->menuStrip1->ResumeLayout(false);
@@ -267,6 +269,7 @@ namespace Task_Manager {
 		newTaskForm->Text = "Nowe zadanie";
 		RectangleF ekran = System::Windows::Forms::Screen::GetBounds(newTaskForm);
 		newTaskForm->Top = (ekran.Height / 2) - (newTaskForm->Height / 2);
+		newTaskForm->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 
 		Label^ label_Task = gcnew Label();
 		label_Task->Width = 200;
@@ -309,7 +312,6 @@ namespace Task_Manager {
 		button_Add->Location = Point(50, 180);
 		newTaskForm->Controls->Add(button_Add);
 
-
 		button_Add->DialogResult = System::Windows::Forms::DialogResult::OK;
 		newTaskForm->ShowDialog();
 		if (textBox_Name->Text->IsNullOrWhiteSpace(textBox_Name->Text) == false && textBox_Task->Text->IsNullOrWhiteSpace(textBox_Task->Text) == false)
@@ -318,6 +320,11 @@ namespace Task_Manager {
 			Task = listView1->Items->Add(textBox_Task->Text);
 			Task->SubItems->Add(masked_Date->Text);
 			Task->SubItems->Add(textBox_Name->Text);
+		}
+		else
+		{
+			Alert^ AlertForm = gcnew Alert;
+			AlertForm->ShowDialog();
 		}
 		SYSTEMTIME st;
 		GetLocalTime(&st);

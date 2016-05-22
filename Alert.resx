@@ -117,24 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Task Manager to aplikacja okienkowa, która ma za zadanie przypominać 
-o zadaniach, które mają zostać wykonane w danym terminie.
-
-Jest to wersja demo, bez możliwości zapisania swoich zadań ani ich wczytania,
-co zostanie dodane w następnej wersji programu.
-
-Aplikacja sprawdza, czy termin zakończenia zadania jest dnia następnego
- i powiadamia o tym użytkownika poprzezwyskakujące okienko powiadomienia.
-
-Elementy listy są sprawdzane:
--podczas dodania nowego elementu do listy;
--przy uruchomieniu aplikacji;
--co 6 godzin od momentu uruchomienia aplikacji.
-
-Maksymalna liczba elementów listy to 1000.
-
-Elementy listy można usuwać pojedynczo zaznaczając wybrany przez siebie element,
-po czym klikając przycisk "Usuń zadanie".</value>
-  </data>
 </root>
