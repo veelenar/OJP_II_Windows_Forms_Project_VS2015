@@ -63,6 +63,7 @@ namespace Task_Manager {
 			this->button_Alert->TabIndex = 0;
 			this->button_Alert->Text = L"OK";
 			this->button_Alert->UseVisualStyleBackColor = true;
+			this->button_Alert->Click += gcnew System::EventHandler(this, &Alert::button_Alert_Click);
 			// 
 			// label1
 			// 
@@ -92,5 +93,8 @@ namespace Task_Manager {
 
 		}
 #pragma endregion
+	private: System::Void button_Alert_Click(System::Object^  sender, System::EventArgs^  e) {
+		Close();
+	}
 	};
 }
