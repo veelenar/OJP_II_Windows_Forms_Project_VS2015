@@ -80,7 +80,7 @@ namespace Task_Manager {
 			}, -1));
 			System::Windows::Forms::ListViewItem^  listViewItem2 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(3) {
 				L"Posprz¹taj pokój",
-					L"23.05.2016", L"Kacper D¹browski"
+					L"09.06.2016", L"Kacper D¹browski"
 			}, -1));
 			System::Windows::Forms::ListViewItem^  listViewItem3 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(3) {
 				L"Naucz siê na kolokwium",
@@ -334,19 +334,19 @@ namespace Task_Manager {
 
 		if (dzien >= 10 && miesiac >= 10)
 		{
-			label_Date->Text = dzien + 1 + "." + miesiac + "." + rok;
+			label_Date->Text = (dzien + 1).ToString() + "." + miesiac.ToString() + "." + rok.ToString();
 		}
 		else if (dzien < 10 && miesiac >= 10)
 		{
-			label_Date->Text = "0" + dzien + 1 + "." + miesiac + "." + rok;
+			label_Date->Text = "0" + (dzien + 1).ToString() + "." + miesiac.ToString() + "." + rok.ToString();
 		}
 		else if (dzien >= 10 && miesiac < 10)
 		{
-			label_Date->Text = dzien + 1 + "." + "0" + miesiac + "." + rok;
+			label_Date->Text = (dzien + 1).ToString() + "." + "0" + miesiac.ToString() + "." + rok.ToString();
 		}
 		else if (dzien < 10 && miesiac < 10)
 		{
-			label_Date->Text = "0" + dzien + 1 + "." + "0" + miesiac + "." + rok;
+			label_Date->Text = "0" + (dzien + 1).ToString() + "." + "0" + miesiac.ToString() + "." + rok.ToString();
 		}
 		for (int i = 0; i < 1000; i++)
 		{
@@ -371,19 +371,19 @@ namespace Task_Manager {
 
 		if (dzien >= 10 && miesiac >= 10)
 		{
-			label_Date->Text = dzien + 1 + "." + miesiac + "." + rok;
+			label_Date->Text = (dzien + 1).ToString() + "." + miesiac.ToString() + "." + rok.ToString();
 		}
 		else if (dzien < 10 && miesiac >= 10)
 		{
-			label_Date->Text = "0" + dzien + 1 + "." + miesiac + "." + rok;
+			label_Date->Text = "0" + (dzien + 1).ToString() + "." + miesiac.ToString() + "." + rok.ToString();
 		}
 		else if (dzien >= 10 && miesiac < 10)
 		{
-			label_Date->Text = dzien + 1 + "." + "0" + miesiac + "." + rok;
+			label_Date->Text = (dzien + 1).ToString() + "." + "0" + miesiac.ToString() + "." + rok.ToString();
 		}
 		else if (dzien < 10 && miesiac < 10)
 		{
-			label_Date->Text = "0" + dzien + 1 + "." + "0" + miesiac + "." + rok;
+			label_Date->Text = "0" + (dzien + 1).ToString() + "." + "0" + miesiac.ToString() + "." + rok.ToString();
 		}
 		for (int i = 0; i < 1000; i++)
 		{
@@ -413,19 +413,19 @@ namespace Task_Manager {
 
 		if (dzien >= 10 && miesiac >= 10)
 		{
-			label_Date->Text = dzien + 1 + "." + miesiac + "." + rok;
+			label_Date->Text = (dzien + 1).ToString() + "." + miesiac.ToString() + "." + rok.ToString();
 		}
 		else if (dzien < 10 && miesiac >= 10)
 		{
-			label_Date->Text = "0" + dzien + 1 + "." + miesiac + "." + rok;
+			label_Date->Text = "0" + (dzien + 1).ToString() + "." + miesiac.ToString() + "." + rok.ToString();
 		}
 		else if (dzien >= 10 && miesiac < 10)
 		{
-			label_Date->Text = dzien + 1 + "." + "0" + miesiac + "." + rok;
+			label_Date->Text = (dzien + 1).ToString() + "." + "0" + miesiac.ToString() + "." + rok.ToString();
 		}
 		else if (dzien < 10 && miesiac < 10)
 		{
-			label_Date->Text = "0" + dzien + 1 + "." + "0" + miesiac + "." + rok;
+			label_Date->Text = "0" + (dzien + 1).ToString() + "." + "0" + miesiac.ToString() + "." + rok.ToString();
 		}
 		for (int i = 0; i < 1000; i++)
 		{
